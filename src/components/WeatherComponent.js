@@ -17,10 +17,11 @@
 function WeatherComponent({data}) {
     return (
         <div>
-            <p>{data.name}</p>
-            <p>{data.main.temp}</p>
+            <p className="city">{data.name}</p>
+            <p>{Math.round(data.main.temp)} °C</p>
             <p>{data.weather[0].main}</p>
-            <p> wind speed {data.wind.speed} km</p>
+            <p> Wind speed {data.wind.speed} km</p>
+            <p>Humidity {data.main.humidity} %</p>
         </div>
     );
 }
